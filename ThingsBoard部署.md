@@ -5,21 +5,21 @@
 
 改为以下：
 
-`<font style="color:rgb(0, 0, 0);">BOOTPROTO=static</font>`
+`BOOTPROTO=static`
 
-`<font style="color:rgb(0, 0, 0);">ONBOOT=</font><font style="color:rgb(27, 106, 199);">yes</font>`
+`ONBOOT=yes`
 
-`<font style="color:rgb(0, 0, 0);">IPADDR=192.168.30.100</font>`<font style="color:rgb(0, 0, 0);">	//以下看自己需求</font>
+`IPADDR=192.168.30.100`<font style="color:rgb(0, 0, 0);">	//以下看自己需求</font>
 
-`<font style="color:rgb(0, 0, 0);">NETMASK=255.255.255.0</font>`
+`NETMASK=255.255.255.0`
 
-`<font style="color:rgb(0, 0, 0);">GATEWAY=192.168.30.2</font>`
+`GATEWAY=192.168.30.2`
 
-`<font style="color:rgb(0, 0, 0);">DNS1=114.114.114.114</font>`
+`DNS1=114.114.114.114`
 
-`<font style="color:rgb(0, 0, 0);">DNS2=8.8.8.8</font>`
+`DNS2=8.8.8.8`
 
-`<font style="color:rgb(0, 0, 0);">DNS3=223.5.5.5</font>`
+`DNS3=223.5.5.5`
 
 <font style="color:rgb(0, 0, 0);"></font>
 
