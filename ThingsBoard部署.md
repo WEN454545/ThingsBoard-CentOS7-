@@ -83,7 +83,7 @@
 
 
 
-在将四个vaseurl地址中的 `mirror.centos.org` 改成 `mirrors.aliyum.com` :
+在将四个vaseurl地址中的 `mirror.centos.org` 改成 `mirrors.aliyun.com` :
 
 <!-- 这是一张图片，ocr 内容为： -->
 ![](https://cdn.nlark.com/yuque/0/2026/png/64871437/1771917271869-c0b856d6-4ca3-42c3-a522-d5278db37113.png)
@@ -104,7 +104,7 @@
 `sudo yum install yum-utils device-mapper-persistent-data lvm2`
 
 ### 挂载阿里云的Docker的镜像源(配置yum)
-`sudo yum-config-manager --add-repo http://mirrors.ailyun.com/docker-ce/linux/centos/docker-ce.repo`
+`sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo`
 
 更新yum
 
@@ -150,13 +150,13 @@ sudo tee /etc/docker/daemon.json <<-'EOF'
 
     "registry-mirrors": [
 
-        "[https://docker.m.daocloud.io",](https://docker.m.daocloud.io",)
+        "https://docker.m.daocloud.io",
 
-        "[https://docker.imgdb.de",](https://docker.imgdb.de",)
+        "https://docker.imgdb.de",
 
-        "[https://docker-0.unsee.tech",](https://docker-0.unsee.tech",)
+        "https://docker-0.unsee.tech",
 
-        "[https://docker.hlmirror.com"](https://docker.hlmirror.com")
+        "https://docker.hlmirror.com"
 
     ]
 
