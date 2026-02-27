@@ -25,11 +25,11 @@
 
 <font style="color:rgb(0, 0, 0);">单独配置DNS则：</font>
 
-`<font style="color:rgb(27, 106, 199);">vi</font><font style="color:rgb(0, 0, 0);"> /etc/resolv.conf</font>`
+<font style="color:rgb(27, 106, 199);">vi</font><font style="color:rgb(0, 0, 0);"> /etc/resolv.conf</font>
 
 <font style="color:rgb(0, 0, 0);">修改或增加：</font>
 
-`<font style="color:rgb(0, 0, 0);">nameserver x:x:x:x</font>`
+<font style="color:rgb(0, 0, 0);">nameserver x:x:x:x</font>
 
 <font style="color:rgb(0, 0, 0);"></font>
 
@@ -56,7 +56,7 @@
 <!-- 这是一张图片，ocr 内容为： -->
 ![](https://cdn.nlark.com/yuque/0/2026/png/64871437/1771915317029-7157c768-f150-4a34-aece-3eea061e1159.png)
 
-**<font style="color:rgb(77, 77, 77);">分析：</font>**<font style="color:rgb(77, 77, 77);">由第二行报错信息得在尝试从 </font><font style="color:rgb(78, 161, 219) !important;">CentOS</font><font style="color:rgb(77, 77, 77);"> 镜像列表获取信息时遇到了问题， </font>`<font style="color:rgb(77, 77, 77);">mirrorlist.centos.org</font>`<font style="color:rgb(77, 77, 77);"> 这个域名在CentOS 7中已经不被维护。同时也可能是由于</font><font style="color:rgb(78, 161, 219) !important;">网络连接</font><font style="color:rgb(77, 77, 77);">问题导致的。</font>
+**<font style="color:rgb(77, 77, 77);">分析：</font>**<font style="color:rgb(77, 77, 77);">由第二行报错信息得在尝试从 </font><font style="color:rgb(78, 161, 219) !important;">CentOS</font><font style="color:rgb(77, 77, 77);"> 镜像列表获取信息时遇到了问题， </font><font style="color:rgb(77, 77, 77);">mirrorlist.centos.org</font><font style="color:rgb(77, 77, 77);"> 这个域名在CentOS 7中已经不被维护。同时也可能是由于</font><font style="color:rgb(78, 161, 219) !important;">网络连接</font><font style="color:rgb(77, 77, 77);">问题导致的。</font>
 
 解决方法：
 
