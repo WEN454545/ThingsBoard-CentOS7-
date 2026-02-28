@@ -5,31 +5,31 @@
 
 改为以下：
 
-`BOOTPROTO=static`
+`<font style="color:rgb(0, 0, 0);">BOOTPROTO=static</font>`
 
-`ONBOOT=yes`
+`<font style="color:rgb(0, 0, 0);">ONBOOT=</font><font style="color:rgb(27, 106, 199);">yes</font>`
 
-`IPADDR=192.168.30.100`<font style="color:rgb(0, 0, 0);">	//以下看自己需求</font>
+`<font style="color:rgb(0, 0, 0);">IPADDR=192.168.30.100</font>`<font style="color:rgb(0, 0, 0);">	//以下看自己需求</font>
 
-`NETMASK=255.255.255.0`
+`<font style="color:rgb(0, 0, 0);">NETMASK=255.255.255.0</font>`
 
-`GATEWAY=192.168.30.2`
+`<font style="color:rgb(0, 0, 0);">GATEWAY=192.168.30.2</font>`
 
-`DNS1=114.114.114.114`
+`<font style="color:rgb(0, 0, 0);">DNS1=114.114.114.114</font>`
 
-`DNS2=8.8.8.8`
+`<font style="color:rgb(0, 0, 0);">DNS2=8.8.8.8</font>`
 
-`DNS3=223.5.5.5`
+`<font style="color:rgb(0, 0, 0);">DNS3=223.5.5.5</font>`
 
 <font style="color:rgb(0, 0, 0);"></font>
 
 <font style="color:rgb(0, 0, 0);">单独配置DNS则：</font>
 
-<font style="color:rgb(27, 106, 199);">vi</font><font style="color:rgb(0, 0, 0);"> /etc/resolv.conf</font>
+`<font style="color:rgb(27, 106, 199);">vi</font><font style="color:rgb(0, 0, 0);"> /etc/resolv.conf</font>`
 
 <font style="color:rgb(0, 0, 0);">修改或增加：</font>
 
-<font style="color:rgb(0, 0, 0);">nameserver x:x:x:x</font>
+`<font style="color:rgb(0, 0, 0);">nameserver x:x:x:x</font>`
 
 <font style="color:rgb(0, 0, 0);"></font>
 
@@ -56,7 +56,7 @@
 <!-- 这是一张图片，ocr 内容为： -->
 ![](https://cdn.nlark.com/yuque/0/2026/png/64871437/1771915317029-7157c768-f150-4a34-aece-3eea061e1159.png)
 
-**<font style="color:rgb(77, 77, 77);">分析：</font>**<font style="color:rgb(77, 77, 77);">由第二行报错信息得在尝试从 </font><font style="color:rgb(78, 161, 219) !important;">CentOS</font><font style="color:rgb(77, 77, 77);"> 镜像列表获取信息时遇到了问题， </font><font style="color:rgb(77, 77, 77);">mirrorlist.centos.org</font><font style="color:rgb(77, 77, 77);"> 这个域名在CentOS 7中已经不被维护。同时也可能是由于</font><font style="color:rgb(78, 161, 219) !important;">网络连接</font><font style="color:rgb(77, 77, 77);">问题导致的。</font>
+**<font style="color:rgb(77, 77, 77);">分析：</font>**<font style="color:rgb(77, 77, 77);">由第二行报错信息得在尝试从 </font><font style="color:rgb(78, 161, 219) !important;">CentOS</font><font style="color:rgb(77, 77, 77);"> 镜像列表获取信息时遇到了问题， </font>`<font style="color:rgb(77, 77, 77);">mirrorlist.centos.org</font>`<font style="color:rgb(77, 77, 77);"> 这个域名在CentOS 7中已经不被维护。同时也可能是由于</font><font style="color:rgb(78, 161, 219) !important;">网络连接</font><font style="color:rgb(77, 77, 77);">问题导致的。</font>
 
 解决方法：
 
@@ -83,7 +83,7 @@
 
 
 
-在将四个vaseurl地址中的 `mirror.centos.org` 改成 `mirrors.aliyun.com` :
+在将四个vaseurl地址中的 `mirror.centos.org` 改成 `mirrors.aliyum.com` :
 
 <!-- 这是一张图片，ocr 内容为： -->
 ![](https://cdn.nlark.com/yuque/0/2026/png/64871437/1771917271869-c0b856d6-4ca3-42c3-a522-d5278db37113.png)
@@ -104,7 +104,7 @@
 `sudo yum install yum-utils device-mapper-persistent-data lvm2`
 
 ### 挂载阿里云的Docker的镜像源(配置yum)
-`sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo`
+`sudo yum-config-manager --add-repo http://mirrors.ailyun.com/docker-ce/linux/centos/docker-ce.repo`
 
 更新yum
 
@@ -150,13 +150,13 @@ sudo tee /etc/docker/daemon.json <<-'EOF'
 
     "registry-mirrors": [
 
-        "https://docker.m.daocloud.io",
+        "[https://docker.m.daocloud.io",](https://docker.m.daocloud.io",)
 
-        "https://docker.imgdb.de",
+        "[https://docker.imgdb.de",](https://docker.imgdb.de",)
 
-        "https://docker-0.unsee.tech",
+        "[https://docker-0.unsee.tech",](https://docker-0.unsee.tech",)
 
-        "https://docker.hlmirror.com"
+        "[https://docker.hlmirror.com"](https://docker.hlmirror.com")
 
     ]
 
