@@ -5,33 +5,33 @@
 
 改为以下：
 
-`<font style="color:rgb(0, 0, 0);">BOOTPROTO=static</font>`
+`BOOTPROTO=static`
 
-`<font style="color:rgb(0, 0, 0);">ONBOOT=</font><font style="color:rgb(27, 106, 199);">yes</font>`
+`ONBOOT=yes`
 
-`<font style="color:rgb(0, 0, 0);">IPADDR=192.168.30.100</font>`<font style="color:rgb(0, 0, 0);">	//以下看自己需求</font>
+`IPADDR=192.168.30.100`	//以下看自己需求
 
-`<font style="color:rgb(0, 0, 0);">NETMASK=255.255.255.0</font>`
+`NETMASK=255.255.255.0`
 
-`<font style="color:rgb(0, 0, 0);">GATEWAY=192.168.30.2</font>`
+`GATEWAY=192.168.30.2`
 
-`<font style="color:rgb(0, 0, 0);">DNS1=114.114.114.114</font>`
+`DNS1=114.114.114.114`
 
-`<font style="color:rgb(0, 0, 0);">DNS2=8.8.8.8</font>`
+`DNS2=8.8.8.8`
 
-`<font style="color:rgb(0, 0, 0);">DNS3=223.5.5.5</font>`
+`DNS3=223.5.5.5`
 
-<font style="color:rgb(0, 0, 0);"></font>
 
-<font style="color:rgb(0, 0, 0);">单独配置DNS则：</font>
 
-`<font style="color:rgb(27, 106, 199);">vi</font><font style="color:rgb(0, 0, 0);"> /etc/resolv.conf</font>`
+单独配置DNS则：
 
-<font style="color:rgb(0, 0, 0);">修改或增加：</font>
+`vi /etc/resolv.conf`
 
-`<font style="color:rgb(0, 0, 0);">nameserver x:x:x:x</font>`
+修改或增加：
 
-<font style="color:rgb(0, 0, 0);"></font>
+`nameserver x:x:x:x`
+
+
 
 配完记得重启网络服务：
 
@@ -56,7 +56,7 @@
 <!-- 这是一张图片，ocr 内容为： -->
 ![](https://cdn.nlark.com/yuque/0/2026/png/64871437/1771915317029-7157c768-f150-4a34-aece-3eea061e1159.png)
 
-**<font style="color:rgb(77, 77, 77);">分析：</font>**<font style="color:rgb(77, 77, 77);">由第二行报错信息得在尝试从 </font><font style="color:rgb(78, 161, 219) !important;">CentOS</font><font style="color:rgb(77, 77, 77);"> 镜像列表获取信息时遇到了问题， </font>`<font style="color:rgb(77, 77, 77);">mirrorlist.centos.org</font>`<font style="color:rgb(77, 77, 77);"> 这个域名在CentOS 7中已经不被维护。同时也可能是由于</font><font style="color:rgb(78, 161, 219) !important;">网络连接</font><font style="color:rgb(77, 77, 77);">问题导致的。</font>
+**<font style="color:rgb(77, 77, 77);">分析：**<font style="color:rgb(77, 77, 77);">由第二行报错信息得在尝试从 <font style="color:rgb(78, 161, 219) !important;">CentOS<font style="color:rgb(77, 77, 77);"> 镜像列表获取信息时遇到了问题， `mirrorlist.centos.org` 这个域名在CentOS 7中已经不被维护。同时也可能是由于<font style="color:rgb(78, 161, 219) !important;">网络连接<font style="color:rgb(77, 77, 77);">问题导致的。
 
 解决方法：
 
@@ -128,7 +128,7 @@
 >
 > `# 安装Compose`
 >
-> `<font style="background-color:#FBDE28;">sudo yum install -y docker-compose-plugin</font>`
+> `sudo yum install -y docker-compose-plugin`
 >
 
 ### 验证
@@ -161,13 +161,13 @@ sudo tee /etc/docker/daemon.json <<-'EOF'
 
     "registry-mirrors": [
 
-        "[https://docker.m.daocloud.io",](https://docker.m.daocloud.io",)
+        "https://docker.m.daocloud.io,
 
-        "[https://docker.imgdb.de",](https://docker.imgdb.de",)
+        "https://docker.imgdb.de",
 
-        "[https://docker-0.unsee.tech",](https://docker-0.unsee.tech",)
+        "https://docker-0.unsee.tech",
 
-        "[https://docker.hlmirror.com"](https://docker.hlmirror.com")
+        "https://docker.hlmirror.com"
 
     ]
 
@@ -222,19 +222,19 @@ Ctrl + X 退出
 
 > 其中的 image 行可以根据自己需求确定：
 >
-> <font style="color:rgb(33, 37, 41);">根据所使用的数据库有三种类型的ThingsBoard单实例docker映像：</font>
+> <font style="color:rgb(33, 37, 41);">根据所使用的数据库有三种类型的ThingsBoard单实例docker映像：
 >
-> + [<font style="color:rgb(42, 125, 236);">thingsboard/tb-postgres</font>](https://hub.docker.com/r/thingsboard/tb-postgres/)<font style="color:rgb(33, 37, 41);"> </font><font style="color:rgb(33, 37, 41);">- ThingsBoard与PostgreSQL数据库的单实例</font>
+> + [<font style="color:rgb(42, 125, 236);">thingsboard/tb-postgres](https://hub.docker.com/r/thingsboard/tb-postgres/)<font style="color:rgb(33, 37, 41);"> <font style="color:rgb(33, 37, 41);">- ThingsBoard与PostgreSQL数据库的单实例
 >
-> <font style="color:rgb(33, 37, 41);">对于具有至少1GB内存的小型服务器的推荐选项。建议使用2-4GB。</font>
+> <font style="color:rgb(33, 37, 41);">对于具有至少1GB内存的小型服务器的推荐选项。建议使用2-4GB。
 >
-> + [<font style="color:rgb(42, 125, 236);">thingsboard/tb-cassandra</font>](https://hub.docker.com/r/thingsboard/tb-cassandra/)<font style="color:rgb(33, 37, 41);"> </font><font style="color:rgb(33, 37, 41);">- 具有Cassandra数据库的ThingsBoard的单个实例。</font>
+> + [<font style="color:rgb(42, 125, 236);">thingsboard/tb-cassandra](https://hub.docker.com/r/thingsboard/tb-cassandra/)<font style="color:rgb(33, 37, 41);"> <font style="color:rgb(33, 37, 41);">- 具有Cassandra数据库的ThingsBoard的单个实例。
 >
-> <font style="color:rgb(33, 37, 41);">最高性能和推荐的选项但至少需要4GB的RAM。建议使用8GB。</font>
+> <font style="color:rgb(33, 37, 41);">最高性能和推荐的选项但至少需要4GB的RAM。建议使用8GB。
 >
-> + [<font style="color:rgb(42, 125, 236);">thingsboard/tb</font>](https://hub.docker.com/r/thingsboard/tb/)<font style="color:rgb(33, 37, 41);"> </font><font style="color:rgb(33, 37, 41);">- 具有嵌入式HSQLDB数据库的ThingsBoard的单个实例。</font>
+> + [<font style="color:rgb(42, 125, 236);">thingsboard/tb](https://hub.docker.com/r/thingsboard/tb/)<font style="color:rgb(33, 37, 41);"> <font style="color:rgb(33, 37, 41);">- 具有嵌入式HSQLDB数据库的ThingsBoard的单个实例。
 >
-> **<font style="color:rgb(33, 37, 41);">注意：</font>**<font style="color:rgb(33, 37, 41);"> 不建议用于任何评估或生产用途仅用于开发目的和自动测试。</font>
+> **<font style="color:rgb(33, 37, 41);">注意：**<font style="color:rgb(33, 37, 41);"> 不建议用于任何评估或生产用途仅用于开发目的和自动测试。
 >
 
 ```plain
