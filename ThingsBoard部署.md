@@ -114,11 +114,22 @@
 
 # 部署Docker
 ### 安装docker
-`# 安装最新版本`
+`# 安装最新版本` 
 
 `sudo yum install -y docker-ce docker-ce-cli containerd.io`
 
 
+
+`# 安装20.10.*版本`
+
+`sudo yum install -y docker-ce-20.10.* docker-ce-cli-20.10.* containerd.io`
+
+> 该版本的docker compose并不存在
+>
+> `# 安装Compose`
+>
+> `<font style="background-color:#FBDE28;">sudo yum install -y docker-compose-plugin</font>`
+>
 
 ### 验证
 <u># 启动服务</u>
