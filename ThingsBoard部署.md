@@ -9,7 +9,7 @@
 
 `BOOTPROTO=static`
 
-`ONBOOT=<font style="color:rgb(27, 106, 199);">yes`
+`ONBOOT=yes`
 
 `IPADDR=192.168.30.100`	//以下看自己需求
 
@@ -55,7 +55,8 @@
 > <!-- 这是一张图片，ocr 内容为： -->
 ![](https://cdn.nlark.com/yuque/0/2026/png/64871437/1772349366123-fa021d31-1db7-46ae-8000-c0d413b14dbb.png)
 >
->     1. 子网IP改为与虚拟机IP同网段：192.168.13.0<!-- 这是一张图片，ocr 内容为： -->
+>     1. 子网IP改为与虚拟机IP同网段：192.168.13.0
+> <!-- 这是一张图片，ocr 内容为： -->
 ![](https://cdn.nlark.com/yuque/0/2026/png/64871437/1772349618475-4c1f90af-d354-4ae5-b222-62346eaa5c15.png)
 >     2. NAT设置中的网关IP地址为：192.168.13.2	（同网段下的2）
 >
@@ -66,7 +67,7 @@
 <!-- 这是一张图片，ocr 内容为： -->
 ![](https://cdn.nlark.com/yuque/0/2026/png/64871437/1771915317029-7157c768-f150-4a34-aece-3eea061e1159.png)
 
-**<font style="color:rgb(77, 77, 77);">分析：**<font style="color:rgb(77, 77, 77);">由第二行报错信息得在尝试从 <font style="color:rgb(78, 161, 219) !important;">CentOS<font style="color:rgb(77, 77, 77);"> 镜像列表获取信息时遇到了问题， `<font style="color:rgb(77, 77, 77);">mirrorlist.centos.org`<font style="color:rgb(77, 77, 77);"> 这个域名在CentOS 7中已经不被维护。同时也可能是由于<font style="color:rgb(78, 161, 219) !important;">网络连接<font style="color:rgb(77, 77, 77);">问题导致的。
+**<font style="color:rgb(77, 77, 77);">分析：**<font style="color:rgb(77, 77, 77);">由第二行报错信息得在尝试从 <font style="color:rgb(78, 161, 219) !important;">CentOS<font style="color:rgb(77, 77, 77);"> 镜像列表获取信息时遇到了问题， `mirrorlist.centos.org`<font style="color:rgb(77, 77, 77);"> 这个域名在CentOS 7中已经不被维护。同时也可能是由于<font style="color:rgb(78, 161, 219) !important;">网络连接<font style="color:rgb(77, 77, 77);">问题导致的。
 
 解决方法：
 
@@ -93,7 +94,7 @@
 
 
 
-在将四个vaseurl地址中的 `mirror.centos.org` 改成 `**<font style="color:#DF2A3F;">mirrors.aliyun.com**` :
+在将四个vaseurl地址中的 `mirror.centos.org` 改成 `**mirrors.aliyun.com**` :
 
 <!-- 这是一张图片，ocr 内容为： -->
 ![](https://cdn.nlark.com/yuque/0/2026/png/64871437/1771917271869-c0b856d6-4ca3-42c3-a522-d5278db37113.png)
