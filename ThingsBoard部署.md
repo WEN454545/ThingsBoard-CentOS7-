@@ -55,8 +55,7 @@
 > <!-- 这是一张图片，ocr 内容为： -->
 ![](https://cdn.nlark.com/yuque/0/2026/png/64871437/1772349366123-fa021d31-1db7-46ae-8000-c0d413b14dbb.png)
 >
->     1. 子网IP改为与虚拟机IP同网段：192.168.13.0
-> <!-- 这是一张图片，ocr 内容为： -->
+>     1. 子网IP改为与虚拟机IP同网段：192.168.13.0<!-- 这是一张图片，ocr 内容为： -->
 ![](https://cdn.nlark.com/yuque/0/2026/png/64871437/1772349618475-4c1f90af-d354-4ae5-b222-62346eaa5c15.png)
 >     2. NAT设置中的网关IP地址为：192.168.13.2	（同网段下的2）
 >
@@ -67,7 +66,7 @@
 <!-- 这是一张图片，ocr 内容为： -->
 ![](https://cdn.nlark.com/yuque/0/2026/png/64871437/1771915317029-7157c768-f150-4a34-aece-3eea061e1159.png)
 
-**<font style="color:rgb(77, 77, 77);">分析：**<font style="color:rgb(77, 77, 77);">由第二行报错信息得在尝试从 <font style="color:rgb(78, 161, 219) !important;">CentOS<font style="color:rgb(77, 77, 77);"> 镜像列表获取信息时遇到了问题， `mirrorlist.centos.org`<font style="color:rgb(77, 77, 77);"> 这个域名在CentOS 7中已经不被维护。同时也可能是由于<font style="color:rgb(78, 161, 219) !important;">网络连接<font style="color:rgb(77, 77, 77);">问题导致的。
+**<font style="color:rgb(77, 77, 77);">分析：**<font style="color:rgb(77, 77, 77);">由第二行报错信息得在尝试从 <font style="color:rgb(78, 161, 219) !important;">CentOS<font style="color:rgb(77, 77, 77);"> 镜像列表获取信息时遇到了问题， `mirrorlist.centos.org` 这个域名在CentOS 7中已经不被维护。同时也可能是由于<font style="color:rgb(78, 161, 219) !important;">网络连接<font style="color:rgb(77, 77, 77);">问题导致的。
 
 解决方法：
 
@@ -139,7 +138,7 @@
 >
 > `# 安装Compose`
 >
-> `<font style="background-color:#FBDE28;">sudo yum install -y docker-compose-plugin`
+> `sudo yum install -y docker-compose-plugin`
 >
 
 ### 验证
@@ -172,13 +171,13 @@ sudo tee /etc/docker/daemon.json <<-'EOF'
 
     "registry-mirrors": [
 
-        "https://docker.m.daocloud.io",
+        "[https://docker.m.daocloud.io",](https://docker.m.daocloud.io",)
 
-        "https://docker.imgdb.de",
+        "[https://docker.imgdb.de",](https://docker.imgdb.de",)
 
-        "https://docker-0.unsee.tech",
+        "[https://docker-0.unsee.tech",](https://docker-0.unsee.tech",)
 
-        "https://docker.hlmirror.com"
+        "[https://docker.hlmirror.com"](https://docker.hlmirror.com")
 
     ]
 
@@ -201,10 +200,63 @@ sudo docker pull hello-world
 
 sudo docker run hello-world 
 
-### 下载nano
+
+
+### 20.10.* 版Docker
+拉取 thingsboard
+
+sudo docker pull thingsboard/tb-postgres
+
+创建网络
+
+sudo docker network create tb-network
+
+创建数据目录 并授权
+
+sudo mkdir -p ~/.mytb-data
+
+sudo chown -R 799:799 ~/.mytb-data
+
+运行镜像
+
+docker run  \
+
+-itd \
+
+--name mytb \
+
+--network tb-network \
+
+-p 9090:9090 \
+
+-p 7070:7070 \
+
+-p 1883:1883 \
+
+-p 5683-5688:5683-5688/udp \
+
+-v ~/.mytb-data:/data \ 
+
+--restart always \
+
+thingsboard/tb-postgres
+
+> 辅助记忆：
+>
+> <font style="color:rgb(0,0,0);">docker run --itd(后台运行，模拟终端) --name （容器名字） --network （指定刚刚创建的网络） -p (映射端口) -v (映射数据目录) --restart 出现错误自动重启
+>
+
+
+
+
+
+
+
+### 最新版Docker
+#### 下载nano
 sudo yum install nano
 
-### 配置docker-compose.yml
+#### 配置docker-compose.yml
 ```yaml
 nano docker-compose.yml
 ```
@@ -253,7 +305,7 @@ mkdir -p ~/.mytb-data && sudo chown -R 799:799 ~/.mytb-data
 mkdir -p ~/.mytb-logs && sudo chown -R 799:799 ~/.mytb-logs
 ```
 
-### 启动ThingsBoard平台
+#### 启动ThingsBoard平台
 ```plain
 #拉取 thingsboard 镜像
 docker compose -p thingsboard pull		
